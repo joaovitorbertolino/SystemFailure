@@ -47,7 +47,7 @@ vblankwait2:
     sta $2006
     ldx #$00
 load_palette:
-    lda title_palette, x
+    lda titleScreen_palette, x
     sta $2007
     inx
     cpx #$20            ; 32 bytes
@@ -60,9 +60,9 @@ load_palette:
     lda #$00
     sta $2006
 
-    lda #<title_nametable
+    lda #<titleScreen_nametable
     sta ptr
-    lda #>title_nametable
+    lda #>titleScreen_nametable
     sta ptr+1
 
     ldx #$04            ; 4 páginas de 256 bytes = 1024
@@ -101,10 +101,10 @@ nmi:
 ; Dados de gráficos (arquivos exportados do NEXXT)
 ; -----------------------------------------------------------------------------
 .segment "RODATA"
-title_palette:
-    .incbin "assets/title.pal"
-title_nametable:
-    .incbin "assets/title.nam"
+titleScreen_palette:
+    .incbin "assets/TitleScreen/title.pal"
+titleScreen_nametable:
+    .incbin "assets/TitleScreen/title.nam"
 
 .segment "VECTORS"
 .word nmi               ; $FFFA = NMI
@@ -112,5 +112,5 @@ title_nametable:
 .word reset             ; $FFFE = IRQ
 
 .segment "CHARS"
-.incbin "assets/title.chr"
-.incbin "assets/title.chr"   ; duplica p/ preencher os 8KB de CHR
+.incbin "assets/TitleScreen/title.chr"
+.incbin "assets/TitleScreen/title.chr"   ; duplica p/ preencher os 8KB de CHR
