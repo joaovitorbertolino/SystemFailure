@@ -553,13 +553,13 @@ sprite_palettes:
     .byte $0F, $07, $10, $28    ; 3: itens
 
 titleScreen_palette:
-    .incbin "assets/TitleScreen/title.pal"
+    .incbin "assets/TitleScreen/title.pal" ;arquivo de paleta da tela inicial
 titleScreen_nametable:
-    .incbin "assets/TitleScreen/title.nam"
+    .incbin "assets/TitleScreen/title.nam" ;arquivo de nametable da tela inicial
 game_palette:
-    .incbin "assets/Quarto-2/quarto_2.pal"
+    .incbin "assets/Quarto-2/quarto_2.pal" ;arquivo de paleta do Spawn
 game_nametable:
-    .incbin "assets/Quarto-2/quarto_2.nam"
+    .incbin "assets/Quarto-2/quarto_2.nam" ;arquivo de nametable do Spawn
 
 .segment "VECTORS"
 .word nmi
