@@ -3,4 +3,4 @@ title_palette: .incbin "assets/TitleScreen/title.pal"
 title_nametable: .incbin "assets/TitleScreen/title.nam"
 
 .segment "CHARS"
-.incbin "assets/TitleScreen/title.chr"
+.incbin "assets/Tiles/TitleSprites.chr"

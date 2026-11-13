@@ -557,9 +557,9 @@ titleScreen_palette:
 titleScreen_nametable:
     .incbin "assets/TitleScreen/title.nam"
 game_palette:
-    .incbin "assets/Spawn/Spawn-session1.pal"
+    .incbin "assets/Quarto-2/quarto_2.pal"
 game_nametable:
-    .incbin "assets/Spawn/Spawn-session1.nam"
+    .incbin "assets/Quarto-2/quarto_2.nam"
 
 .segment "VECTORS"
 .word nmi
@@ -570,5 +570,5 @@ game_nametable:
 ; CHR-ROM (8KB = 2 pattern tables de 4KB)
 ; -----------------------------------------------------------------------------
 .segment "CHARS"
-.incbin "assets/Title/TitleSprites.chr"      ; $0000: tela inicial + sprites
-.incbin "assets/Title/Rooms.chr"   ; $1000: salas
+.incbin "assets/Tiles/TitleSprites.chr"      ; $0000: tela inicial + sprites
+.incbin "assets/Tiles/Rooms.chr"   ; $1000: salas
